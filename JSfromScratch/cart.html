@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Cart</title>
+  </head>
+
+  <body>
+    <button onclick="showCart()">Show Quantity</button>
+    <button onclick="addToCart()">Add to cart</button>
+    <button onclick="add2()">+2</button>
+    <button onclick="add3()">+3</button>
+    <button onclick="resetCart()">Reset Cart</button>
+    <script>
+      let cartQuantity = 0;
+
+      const showCart = () => {
+        console.log("Cart Quantity: ", cartQuantity);
+      };
+
+      const addToCart = () => {
+        cartQuantity = cartQuantity + 1;
+        console.log("1 Item added to the cart");
+        console.log("New Cart Quantity: ", cartQuantity);
+        return cartQuantity;
+      };
+
+      const add2 = () => {
+        cartQuantity = cartQuantity + 2;
+        console.log("2 Item added to the cart");
+        console.log("New Cart Quantity: ", cartQuantity);
+        return cartQuantity;
+      };
+
+      const add3 = () => {
+        cartQuantity = cartQuantity + 3;
+        console.log("3 Item added to the cart");
+        console.log("New Cart Quantity: ", cartQuantity);
+        return cartQuantity;
+      };
+
+      const resetCart = () => {
+        if (cartQuantity == 0) {
+          console.log("Your Cart is empty.");
+        } else {
+          cartQuantity = cartQuantity - cartQuantity;
+          console.log("Cart has been cleared");
+          console.log("New Cart Quantity: ", cartQuantity);
+          return cartQuantity;
+        }
+      };
+    </script>
+  </body>
+</html>
